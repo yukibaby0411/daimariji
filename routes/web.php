@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('static_pages.home');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/promise', function() {
+    return view('static_pages.promise');
 });
