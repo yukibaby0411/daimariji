@@ -1,16 +1,14 @@
-body{margin:0;padding:0;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto}
-a {color:#000;font-size:14px;}
-#main{width:100%;}
-#wrap{position:relative;margin:0 auto;width:1140px;height:680px;left:15px;}
+#main{width:100%; color: #333333;}
+#wrap{position:relative;margin:0 auto;width:1140px;height:680px;}
 #text{width:420px;height:425px;left:70px;top:60px;position:absolute;}
 #code{display:none;font-size:16px;}
 #clock-box {position:absolute;left:60px;top:550px;font-size:28px;display:none;}
 #clock-box a {font-size:28px;text-decoration:none;}
-#clock{margin-left:48px;}
-#clock .digit {font-size:64px;}
-#canvas{margin:0 auto;width:1140px;height:680px;}
+#clock{margin-left:32px; margin-top:10px;}
+#clock .digit {font-size:34px;}
+#canvas{margin:0 auto;width:1140px;height:680px;position:relative;left:15px;}
 #error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
 .hand{cursor:pointer;}
 .say{margin-left:5px;}
 .space{margin-right:180px;}
-.nbsp{ margin-left: 36px;}
+.digit{display:inline-block;width:40px;height:52px;text-align:center;}

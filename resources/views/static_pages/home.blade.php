@@ -35,7 +35,7 @@
                 setTimeout("$('.title3').fadeOut(1000)",6450);
                 setTimeout("$('.title4').fadeIn(1000)",7450);
                 setTimeout("$('.title4').fadeOut(1000)",9200);
-                //setTimeout("window.location.href='home'",9500);
+                setTimeout("window.location.href='home'",9500);
             });
             function times() {
                 second_num = document.getElementById('second_num');

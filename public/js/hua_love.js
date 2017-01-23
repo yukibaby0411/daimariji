@@ -199,7 +199,7 @@
             var len = this.length / 2;
 
             ctx.save();
-            ctx.strokeStyle = 'rgb(35, 31, 32)';
+            ctx.strokeStyle = '#555555';  //底线颜色
             ctx.lineWidth = this.height;
             ctx.lineCap = 'round';
             ctx.lineJoin = 'round';
@@ -237,7 +237,7 @@
             var x = seed.x || this.width / 2;
             var y = seed.y || this.height / 2;
             var point = new Point(x, y);
-            var color = seed.color || '#FF0000';
+            var color = seed.color || '#FF0000';  //snowday
             var scale = seed.scale || 1;
 
             this.seed = new Seed(this, point, scale, color);
@@ -246,7 +246,8 @@
         initFooter: function() {
             var footer = this.opt.footer || {};
             var width = footer.width || this.width;
-            var height = footer.height || 5;
+            //var height = footer.height || 5;
+            var height = 2;  //底线
             var speed = footer.speed || 2;
             this.footer = new Footer(this, width, height, speed);
         },
@@ -260,7 +261,7 @@
         initBloom: function() {
             var bloom = this.opt.bloom || {};
             var cache = [],
-                num = bloom.num || 500, 
+                num = bloom.num || 500,  //树叶
                 width = bloom.width || this.width,
                 height = bloom.height || this.height,
                 figure = this.seed.heart.figure;
@@ -433,7 +434,7 @@
         this.point2 = point2;
         this.point3 = point3;
         this.radius = radius;
-        this.length = length || 100;    
+        this.length = length || 100;
         this.len = 0;
         this.t = 1 / (this.length - 1);   
         this.branchs = branchs || [];
@@ -457,9 +458,9 @@
             var ctx = s.tree.ctx;
             ctx.save();
         	ctx.beginPath();
-        	ctx.fillStyle = 'rgb(35, 31, 32)';
-            ctx.shadowColor = 'rgb(35, 31, 32)';
-            ctx.shadowBlur = 2;
+        	ctx.fillStyle = '#734b22';  //树干颜色
+            ctx.shadowColor = '#000000';  //树纹颜色
+            ctx.shadowBlur = 4;  //树阴影
         	ctx.moveTo(p.x, p.y);
         	ctx.arc(p.x, p.y, s.radius, 0, 2 * Math.PI);
         	ctx.closePath();
@@ -471,7 +472,8 @@
     Bloom = function(tree, point, figure, color, alpha, angle, scale, place, speed) {
         this.tree = tree;
         this.point = point;
-        this.color = color || 'rgb(255,' + random(0, 255) + ',' + random(0, 255) + ')';
+        //树叶颜色
+        this.color = color || 'rgb('+ random(0, 50) +',' + random(150, 255) + ',' + random(0, 50) + ')';
         this.alpha = alpha || random(0.3, 1);
         this.angle = angle || random(0, 360);
         this.scale = scale || 0.1;

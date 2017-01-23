@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/hua_jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/hua_default.css">
     <script type="text/javascript" src="js/hua_jscex.min.js"></script>
@@ -16,13 +16,6 @@
     <script type="text/javascript" src="js/hua_jscex-async-powerpack.min.js"></script>
     <script type="text/javascript" src="js/hua_functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/hua_love.js" charset="utf-8"></script>
-    <style type="text/css">
-        <!--
-        .STYLE1 {
-            color: #666666
-        }
-        -->
-    </style>
     <audio autoplay="autopaly">
         <source src="/plugins/kisstherain.mp3" type="audio/mp3" />
     </audio>
@@ -33,7 +26,7 @@
         <div id="wrap">
             <div id="text">
                 <div id="code">
-                    <font color="#e80500">
+                    <font color="#777777">
                         <span class="say">种一棵树，最好的时间是十年前</span><br>
                         <span class="say">其次是现在</span><br>
                         <span class="say"></span><br>
@@ -56,7 +49,7 @@
                     </p>
                 </div>
             </div>
-            <div id="clock-box"> <span class="STYLE1"></span><font color="#ff8030">网站开始建设</font> <span class="STYLE1">已经……</span>
+            <div id="clock-box"> <span class="STYLE1"></span><font color="#ff8030">网站已经开始建设：</font>
                 <div id="clock"></div>
             </div>
             <canvas id="canvas" width="1100" height="680" style="margin-left: -15px;"></canvas>
@@ -207,7 +200,7 @@
 
             var textAnimate = eval(Jscex.compile("async", function () {
                 var together = new Date();
-                together.setFullYear(2016, 1, 23); 		//时间年月日 2017/1/11/8:30
+                together.setFullYear(2017, 0, 23); 		    //时间年月日
                 together.setHours(8);						//小时
                 together.setMinutes(30);					//分钟
                 together.setSeconds(0);					    //秒前一位
