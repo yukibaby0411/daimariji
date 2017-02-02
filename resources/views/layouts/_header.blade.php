@@ -20,12 +20,9 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- 导航条 -->
 
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="font-size: 15px;">
                 <li>
-                    <a href="">首 页</a>
-                </li>
-                <li>
-                    <a href="">公 告</a>
+                    <a href="{{ url('/notices') }}">公 告</a>
                 </li>
                 <li>
                     <a href="">说 说</a>
@@ -37,14 +34,25 @@
                     <a href="">问 答</a>
                 </li>
                 <li>
-                    <a href="">留言板</a>
-                </li>
-                <li>
                     <a href="">反 馈</a>
                 </li>
                 <li>
                     <a href="/promise">寄 语</a>
                 </li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: 0; margin-top: 8px; font-size: 14px;">快捷入口</button>
+                    <ul class="dropdown-menu" role="menu" style="width: 80px; min-width: 1px; padding-left: 2px;">
+                        <li><a href="#">认 证</a></li>
+                        <li><a href="#">签 到</a></li>
+                        <li><a href="#">反 馈</a></li>
+                        <li><a href="#">反 馈</a></li>
+                        <li><a href="#">反 馈</a></li>
+                        <li><a href="#">反 馈</a></li>
+                        <li><a href="#">反 馈</a></li>
+                        <li><a href="#">反 馈</a></li>
+                        <li><a href="#">反 馈</a></li>
+                    </ul>
+                </div>
             </ul>
 
             <!-- 导航右侧 -->
@@ -65,7 +73,7 @@
                 <!-- 搜索框 -->
                     <li class="searched" id="search_input">
                         <a style="padding-top: 11px; padding-bottom: 11px;">
-                            <input class="form-control" type="text" value="12345" style="border-radius: 5px; width:128px; height: 28px; padding-right: 32px;">
+                            <input class="form-control" type="text" value="" style="border-radius: 5px; width:128px; height: 28px; padding-right: 32px;" id="search_input_focus">
                         </a>
                     </li>
                     <li class="searched" style="margin-left: -60px;" id="search_icon">
@@ -74,7 +82,7 @@
 
                     <!-- 消息提醒 -->
                     <li>
-                        <a href="">
+                        <a href="" title="消息提醒">
                             <i class="glyphicon glyphicon-bell"></i>
                             <i class="font-normal"> （252）</i>
                         </a>

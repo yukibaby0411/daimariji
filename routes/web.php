@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('static_pages.home');
-});
+
 
 
 Auth::routes();
@@ -22,4 +20,13 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/promise', function() {
     return view('static_pages.promise');
+});
+
+Route::get('/notices', 'NoticesController@index');
+Route::get('/notices/create', 'NoticesController@create');
+Route::post('/notices', 'NoticesController@store');
+
+
+Route::get('/', function () {
+    return view('static_pages.home');
 });

@@ -9,7 +9,9 @@
 
     <title>
         {{-- config('app.name', 'Laravel') --}}
-        首页 - 代码日记 - 一只程序猿的自传
+        @yield('title', 'snowday') - 代码日记 - 一只程序猿的自传
+        @yield('title', 'snowday
+        ') - 代码日记 - 一只程序猿的自传
     </title>
     <link rel="icon" href="/images/icon.png">
     <!-- Styles -->
