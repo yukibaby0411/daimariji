@@ -514,7 +514,6 @@
                     </div>
                 </div>
                 --}}
-
                 @foreach($notices as $notice)
                 <div class="panel panel-default
                      @if($notice->order != 0)

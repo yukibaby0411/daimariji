@@ -12,5 +12,4 @@ class NoticesController extends Controller
         $notices = Notice::orderBy('order', 'asc')->orderBy('created_at', 'desc')->paginate(6);
         return view('notices.index', compact('notices'));
     }
-
 }

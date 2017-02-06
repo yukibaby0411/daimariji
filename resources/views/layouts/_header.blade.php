@@ -97,7 +97,7 @@
 
                         <ul class="dropdown-menu" role="menu" style="padding: 0;">
                             <li>
-                                <a href="" style=" padding: 8px 0 8px 30px;">
+                                <a href="/users/{{ Auth::user()->id }}" style=" padding: 8px 0 8px 30px;">
                                     <i class="glyphicon glyphicon-user"></i><i style="margin-left: 14px;"  class="font-normal"> 个人中心</i>
                                 </a>
                             </li>

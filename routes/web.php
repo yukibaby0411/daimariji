@@ -12,7 +12,11 @@
 */
 
 
+Route::get('/ajax/code/tel', 'Ajax\CodeController@tel');
 
+Route::get('/yuming', 'YumingController@index');
+
+Route::resource('users', 'UsersController');
 
 Auth::routes();
 
@@ -27,6 +31,10 @@ Route::get('/notices/create', 'NoticesController@create');
 Route::post('/notices', 'NoticesController@store');
 
 
+
+
 Route::get('/', function () {
     return view('static_pages.home');
 });
+
+
