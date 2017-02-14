@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading">账号注册</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
@@ -84,7 +84,7 @@
                             <label for="code" class="col-md-4 control-label">验证码</label>
 
                             <div class="col-md-6" style="position: relative;">
-                                <input id="code" type="text" class="form-control" name="code" required>
+                                <input id="code" type="text" class="form-control" name="code" value="{{ old('code') }}" required>
                                 <a href="javascript:void(0);" onclick="check_tel();"><input type="button" value="获取验证码" style="position: absolute; right: 20px; top: 7px; border-radius: 4px; border: 0;" id="djs_btn"></a>
 
                                 @if ($errors->has('code'))
@@ -122,6 +122,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     注册
                                 </button>
+                                <a href="{{ url('/login') }}" style="margin-left: 12px;">已有账号？立即登录</a>
                             </div>
                         </div>
                     </form>

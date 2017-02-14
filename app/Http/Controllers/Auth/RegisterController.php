@@ -51,8 +51,9 @@ class RegisterController extends Controller
             'name' => [
                 'required',
                 'unique:users',
-                'max:255',
-                'regex:/^((?!admin|root).)*$/'
+                'max:16',
+                'regex:/^((?!admin|root).)*$/',
+                'alpha_num'
             ],
             'tel' => [
                 'required',
@@ -72,10 +73,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //验证密码强度
+        $pass = $data['password'];
+        $pass_leng = strlen($pass);
+        $strong = 0;
+        if(preg_match('/[0-9]+/', $pass)) $strong+=15;
+        if(preg_match('/[a-z]+/', $pass)) $strong+=15;
+        if(preg_match('/[A-Z]+/', $pass)) $strong+=15;
+        if(preg_match('/((?=[\x21-\x7e]+)[^A-Za-z0-9])/', $pass)) $strong+=15;
+        if($pass_leng>8) $strong+=10;
+        if($pass_leng>16) $strong+=10;
+        if($pass_leng>32) $strong+=20;
         return User::create([
-            'name' => $data['name'],
+            'name' => strtolower($data['name']),
             'tel' => $data['tel'],
             'password' => bcrypt($data['password']),
+            'pass_strong' => $strong
         ]);
     }
 }

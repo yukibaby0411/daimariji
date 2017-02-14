@@ -85,6 +85,7 @@
                 <div class="duilian" style="background-position: 0 -10px; left: -145px;" ></div>
                 <div class="duilian" style="right: -145px;"></div>
                 <!--折叠按钮-->
+                @include('shared.messages')
                 <div class="panel panel-default">
                     <button class="btn btn-default" style="width: 100%;" onclick="push_all();" id="btn_all">全部展开</button>
                 </div>

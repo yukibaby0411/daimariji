@@ -45,12 +45,6 @@
                         <li><a href="#">认 证</a></li>
                         <li><a href="#">签 到</a></li>
                         <li><a href="#">反 馈</a></li>
-                        <li><a href="#">反 馈</a></li>
-                        <li><a href="#">反 馈</a></li>
-                        <li><a href="#">反 馈</a></li>
-                        <li><a href="#">反 馈</a></li>
-                        <li><a href="#">反 馈</a></li>
-                        <li><a href="#">反 馈</a></li>
                     </ul>
                 </div>
             </ul>
@@ -84,7 +78,7 @@
                     <li>
                         <a href="" title="消息提醒">
                             <i class="glyphicon glyphicon-bell"></i>
-                            <i class="font-normal"> （252）</i>
+                            <i class="font-normal"> （0）</i>
                         </a>
                     </li>
 
@@ -103,8 +97,14 @@
                             </li>
                             <hr style=" margin: 0">
                             <li>
-                                <a href="" style=" padding: 8px 0 8px 30px;">
+                                <a href="/users/{{ Auth::user()->id }}/edit" style=" padding: 8px 0 8px 30px;">
                                     <i class="glyphicon glyphicon-cog"></i><i style="margin-left: 14px;"  class="font-normal"> 编辑资料</i>
+                                </a>
+                            </li>
+                            <hr style=" margin: 0">
+                            <li>
+                                <a href="/users/{{ Auth::user()->id }}/set" style=" padding: 8px 0 8px 30px;">
+                                    <i class="glyphicon glyphicon-cog"></i><i style="margin-left: 14px;"  class="font-normal"> 系统设置</i>
                                 </a>
                             </li>
                             <hr style=" margin: 0">

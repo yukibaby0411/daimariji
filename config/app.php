@@ -180,6 +180,9 @@ return [
         //Laravel-admin
         Encore\Admin\Providers\AdminServiceProvider::class,
 
+        //邮件发送
+        Naux\Mail\SendCloudServiceProvider::class,
+
     ],
 
     /*

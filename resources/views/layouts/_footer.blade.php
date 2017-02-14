@@ -41,9 +41,9 @@
         <div class="foot3">
             <ul>
                 <h3>统 计</h3>
-                <a href=""><li>会员数：10315</li></a>
-                <a href=""><li>话题数：3384</li></a>
-                <a href=""><li>评论数：17699</li></a>
+                <a href=""><li>会员数：@stack('members')</li></a>
+                <a href=""><li>话题数：0</li></a>
+                <a href=""><li>评论数：0</li></a>
             </ul>
         </div>
         <div class="foot4">

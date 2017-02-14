@@ -48,16 +48,12 @@
                 <p style="font-size: 16px; color: #ff0066;">系统检测到您未登录，请先登录( <span id="second_num">10</span>s )</p>
                 <br>
                 <p>
-                    <a class="btn btn-success btn-mid" href="#" role="button" style="margin-right: 10px;">已有账号，马上登录</a>
-                    <a class="btn btn-primary btn-mid" href="#" role="button">注册新账号</a>
+                    <a class="btn btn-success btn-mid" href="{{ url('/login') }}" role="button" style="margin-right: 10px;">已有账号，马上登录</a>
+                    <a class="btn btn-primary btn-mid" href="{{ url('/register') }}" role="button">注册新账号</a>
                 </p>
             </div>
         </div>
     @else
-
-        <script>
-            window.onload = alert(5);
-        </script>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">

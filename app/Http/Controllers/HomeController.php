@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -28,6 +29,9 @@ class HomeController extends Controller
 
     public function promise()
     {
-        return view('promise');
+        if(Auth::check() === FALSE) {
+            return redirect('/login');
+        }
+        return view('static_pages.promise');
     }
 }

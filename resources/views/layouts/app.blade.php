@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,8 +10,6 @@
     <title>
         {{-- config('app.name', 'Laravel') --}}
         @yield('title', 'snowday') - 代码日记 - 一只程序猿的自传
-        @yield('title', 'snowday
-        ') - 代码日记 - 一只程序猿的自传
     </title>
     <link rel="icon" href="/images/icon.png">
     <!-- Styles -->
@@ -39,6 +37,11 @@
         <div class="app-content">
             @yield('content')
         </div>
+
+        {{--向include子视图压入变量--}}
+        @push('members'){{ $_SESSION['members'] }}
+        @endpush
+
         @include('layouts._footer')
     </div>
 
